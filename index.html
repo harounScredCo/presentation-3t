@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Présentation interactive Pour &amp; Par</title>
+    <!--
+      Cette application Web sert d'alternative à un diaporama classique. Elle
+      présente le sommaire et les différents chapitres du projet Pour & Par de
+      manière interactive. Tous les points du sommaire sont visibles dès le
+      chargement de la page. Chaque section peut être étendue pour afficher
+      une citation issue du chapitre correspondant. Un clic sur le titre ouvre
+      une fenêtre modale contenant l'intégralité du chapitre. Le style est
+      sobre afin de laisser la part belle au contenu.
+    -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Présentation interactive du projet Pour &amp; Par</h1>
+      <p class="subtitle">
+        Un aperçu synthétique et interactif du modèle coopératif circulaire
+        Pour &amp; Par
+      </p>
+    </header>
+    <main id="app"></main>
+
+    <!-- Fenêtre modale pour afficher le contenu complet des chapitres -->
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span id="modal-close" class="close">&times;</span>
+        <h2 id="modal-title"></h2>
+        <div id="modal-body"></div>
+      </div>
+    </div>
+
+    <!-- Inclusion des scripts sans module : summary.js définit window.SUMMARY accessible depuis app.js -->
+    <script src="summary.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
